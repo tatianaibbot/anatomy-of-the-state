@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>What the State Is</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Anatomy of the State</a></li><li class="chapter-item expanded "><a href="chapter1.html"><strong aria-hidden="true">1.</strong> What the State Is Not</a></li><li class="chapter-item expanded "><a href="chapter2.html" class="active"><strong aria-hidden="true">2.</strong> What the State Is</a></li><li class="chapter-item expanded "><a href="chapter3.html"><strong aria-hidden="true">3.</strong> How the State Preserves Itself</a></li><li class="chapter-item expanded "><a href="chapter4.html"><strong aria-hidden="true">4.</strong> How the State Transcends Its Limits</a></li><li class="chapter-item expanded "><a href="chapter5.html"><strong aria-hidden="true">5.</strong> What the State Fears</a></li><li class="chapter-item expanded "><a href="chapter6.html"><strong aria-hidden="true">6.</strong> How States Relate to One Another</a></li><li class="chapter-item expanded "><a href="chapter7.html"><strong aria-hidden="true">7.</strong> History as a Race Between State Power and Social Power</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="what-the-state-is"><a class="header" href="#what-the-state-is">What the State Is</a></h2>
+<p>Man is born naked into the world, and needing to use his mind to learn how to take the resources given him by nature, and to transform them (for example, by investment in &quot;capital&quot;) into shapes and forms and places where the resources can be used for the satisfaction of his wants and the advancement of his standard of living. The only way by which man can do this is by the use of his mind and energy to transform resources (&quot;production&quot;) and to exchange these products for products created by others. Man has found that, through the process of voluntary, mutual exchange, the productivity and hence, the living standards of all participants in exchange may increase enormously. The only &quot;natural&quot; course for man to survive and to attain wealth, therefore, is by using his mind and energy to engage in the production-and-exchange process. He does this, first, by finding natural resources, and then by transforming them (by &quot;mixing his labor&quot; with them, as Locke puts it), to make them his individual property, and then by exchanging this property for the similarly obtained property of others. The social path dictated by the requirements of man's nature, therefore, is the path of &quot;property rights&quot; and the &quot;free market&quot; of gift or exchange of such rights. Through this path, men have learned how to avoid the &quot;jungle&quot; methods of fighting over scarce resources so that A can only acquire them at the expense of B and, instead, to multiply those resources enormously in peaceful and harmonious production and exchange.</p>
+<p>The great German sociologist Franz Oppenheimer pointed out that there are two mutually exclusive ways of acquiring wealth; one, the above way of production and exchange, he called the &quot;economic means.&quot; The other way is simpler in that it does not require productivity; it is the way of seizure of another's goods or services by the use of force and violence. This is the method of one-sided confiscation, of theft of the property of others. This is the method which Oppenheimer termed &quot;the political means&quot; to wealth. It should be clear that the peaceful use of reason and energy in production is the &quot;natural&quot; path for man: the means for his survival and prosperity on this earth. It should be equally clear that the coercive, exploitative means is contrary to natural law; it is parasitic, for instead of adding to production, it subtracts from it. The &quot;political means&quot; siphons production off to a parasitic and destructive individual or group; and this siphoning not only subtracts from the number producing, but also lowers the producer's incentive to produce beyond his own subsistence. In the long run, the robber destroys his own subsistence by dwindling or eliminating the source of his own supply. But not only that; even in the short-run, the predator is acting contrary to his own true nature as a man.</p>
+<p>We are now in a position to answer more fully the question: what is the State? The State, in the words of Oppenheimer, is the &quot;organization of the political means&quot;; it is the systematization of the predatory process over a given territory.<sup class="footnote-reference"><a href="#note4">1</a></sup> For crime, at best, is sporadic and uncertain; the parasitism is ephemeral, and the coercive, parasitic lifeline may be cut off at any time by the resistance of the victims. The State provides a legal, orderly, systematic channel for the predation of private property; it renders certain, secure, and relatively &quot;peaceful&quot; the lifeline of the parasitic caste in society.<sup class="footnote-reference"><a href="#note5">2</a></sup> Since production must always precede predation, the free market is anterior to the State. The State has never been created by a &quot;social contract&quot;; it has always been born in conquest and exploitation. The classic paradigm was a conquering tribe pausing in its time-honored method of looting and murdering a conquered tribe, to realize that the time-span of plunder would be longer and more secure, and the situation more pleasant, if the conquered tribe were allowed to live and produce, with the conquerors settling among them as rulers exacting a steady annual tribute.<sup class="footnote-reference"><a href="#note6">3</a></sup> One method of the birth of a State may be illustrated as follows: in the hills of southern &quot;Ruritania,&quot; a bandit group manages to obtain physical control over the territory, and finally the bandit chieftain proclaims himself &quot;King of the sovereign and independent government of South Ruritania&quot;; and, if he and his men have the force to maintain this rule for a while, lo and behold! a new State has joined the &quot;family of nations,&quot; and the former bandit leaders have been transformed into the lawful nobility of the realm.</p>
+<div class="footnote-definition" id="note4"><sup class="footnote-definition-label">1</sup>
+<p>Franz Oppenheimer, The State (New York: Vanguard Press, 1926) pp. 24-27: There are two fundamentally opposed means whereby man, requiring sustenance, is impelled to obtain the necessary means for satisfying his desires. These are work and robbery, one's own labor and the forcible appropriation of the labor of others. . . . I propose in the following discussion to call one's own labor and the equivalent exchange of one's own labor for the labor of others, the &quot;economic means&quot; for the satisfaction of need while the unrequited appropriation of the labor of others will be called the &quot;political means&quot;. . . . The State is an organization of the political means. No State, therefore, can come into being until the economic means has created a definite number of objects for the satisfaction of needs, which objects may be taken away or appropriated by warlike robbery.</p>
+</div>
+<div class="footnote-definition" id="note5"><sup class="footnote-definition-label">2</sup>
+<p>Albert Jay Nock wrote vividly that the State claims and exercises the monopoly of crime... . It forbids private murder, but itself organizes murder on a colossal scale. It punishes private theft, but itself lays unscrupulous hands on anything it wants, whether the property of citizen or of alien. Nock, On Doing the Right Thing, and Other Essays (New York: Harper and Bros., 1929), p. 143; quoted in Jack Schwartzman, &quot;Albert Jay Nock—A Superfluous Man,&quot; Faith and Freedom (December, 1953): 11.</p>
+</div>
+<div class="footnote-definition" id="note6"><sup class="footnote-definition-label">3</sup>
+<p>Oppenheimer, The State, p. 15: What, then, is the State as a sociological concept? The State, completely in its genesis... is a social institution, forced by a victorious group of men on a defeated group, with the sole purpose of regulating the dominion of the victorious group of men on a defeated group, and securing itself against revolt from within and attacks from abroad. Teleologically, this dominion had no other purpose than the economic exploitation of the vanquished by the victors. And de Jouvenel has written: &quot;the State is in essence the result of the successes achieved by a band of brigands who superimpose themselves on small, distinct societies.&quot; Bertrand de Jouvenel, On Power (New York: Viking Press, 1949), pp. 100-01.</p>
+</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="chapter1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="chapter3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="chapter1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="chapter3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>How the State Transcends Its Limits</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Anatomy of the State</a></li><li class="chapter-item expanded "><a href="chapter1.html"><strong aria-hidden="true">1.</strong> What the State Is Not</a></li><li class="chapter-item expanded "><a href="chapter2.html"><strong aria-hidden="true">2.</strong> What the State Is</a></li><li class="chapter-item expanded "><a href="chapter3.html"><strong aria-hidden="true">3.</strong> How the State Preserves Itself</a></li><li class="chapter-item expanded "><a href="chapter4.html" class="active"><strong aria-hidden="true">4.</strong> How the State Transcends Its Limits</a></li><li class="chapter-item expanded "><a href="chapter5.html"><strong aria-hidden="true">5.</strong> What the State Fears</a></li><li class="chapter-item expanded "><a href="chapter6.html"><strong aria-hidden="true">6.</strong> How States Relate to One Another</a></li><li class="chapter-item expanded "><a href="chapter7.html"><strong aria-hidden="true">7.</strong> History as a Race Between State Power and Social Power</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="how-the-state-transcends-its-limits"><a class="header" href="#how-the-state-transcends-its-limits">How the State Transcends Its Limits</a></h2>
+<p>As Bertrand de Jouvenel has sagely pointed out, through the centuries men have formed concepts designed to check and limit the exercise of State rule; and, one after another, the State, using its intellectual allies, has been able to transform these concepts into intellectual rubber stamps of legitimacy and virtue to attach to its decrees and actions. Originally, in Western Europe, the concept of divine sovereignty held that the kings may rule only according to divine law; the kings turned the concept into a rubber stamp of divine approval for any of the kings' actions. The concept of parliamentary democracy began as a popular check upon absolute monarchical rule; it ended with parliament being the essential part of the State and its every act totally sovereign. As de Jouvenel concludes:</p>
+<blockquote>
+<p>Many writers on theories of sovereignty have worked out one . . . of these restrictive devices. But in the end every single such theory has, sooner or later, lost its original purpose, and come to act merely as a springboard to Power, by providing it with the powerful aid of an invisible sovereign with whom it could in time successfully identify itself.<sup class="footnote-reference"><a href="#note20">1</a></sup></p>
+</blockquote>
+<p>Similarly with more specific doctrines: the &quot;natural rights&quot; of the individual enshrined in John Locke and the Bill of Rights, became a statist &quot;right to a job&quot;; utilitarianism turned from arguments for liberty to arguments against resisting the State's invasions of liberty, etc.</p>
+<p>Certainly the most ambitious attempt to impose limits on the State has been the Bill of Rights and other restrictive parts of the American Constitution, in which written limits on government became the fundamental law to be interpreted by a judiciary supposedly independent of the other branches of government. All Americans are familiar with the process by which the construction of limits in the Constitution has been inexorably broadened over the last century. But few have been as keen as Professor Charles Black to see that the State has, in the process, largely transformed judicial review itself from a limiting device to yet another instrument for furnishing ideological legitimacy to the government's actions. For if a judicial decree of &quot;unconstitutional&quot; is a mighty check to government power, an implicit or explicit verdict of &quot;constitutional&quot; is a mighty weapon for fostering public acceptance of ever-greater government power.</p>
+<p>Professor Black begins his analysis by pointing out the crucial necessity of &quot;legitimacy&quot; for any government to endure, this legitimation signifying basic majority acceptance of the government and its actions.<sup class="footnote-reference"><a href="#note21">2</a></sup> Acceptance of legitimacy becomes a particular problem in a country such as the United States, where &quot;substantive limitations are built into the theory on which the government rests.&quot; What is needed, adds Black, is a means by which the government can assure the public that its increasing powers are, indeed, &quot;constitutional.&quot; And this, he concludes, has been the major historic function of judicial review.</p>
+<p>Let Black illustrate the problem:</p>
+<blockquote>
+<p>The supreme risk [to the government] is that of disaffection and a feeling of outrage widely disseminated throughout the population, and loss of moral authority by the government as such, however long it may be propped up by force or inertia or the lack of an appealing and immediately available alternative. Almost everybody living under a government of limited powers, must sooner or later be subjected to some governmental action which as a matter of private opinion he regards as outside the power of government or positively forbidden to government. A man is drafted, though he finds nothing in the Constitution about being drafted. . . . A farmer is told how much wheat he can raise; he believes, and he discovers that some respectable lawyers believe with him, that the government has no more right to tell him how much wheat he can grow than it has to tell his daughter whom she can marry. A man goes to the federal penitentiary for saying what he wants to, and he paces his cell reciting . . . &quot;Congress shall make no laws abridging the freedom of speech.&quot;. . . A businessman is told what he can ask, and must ask, for buttermilk.</p>
+<p>The danger is real enough that each of these people (and who is not of their number?) will confront the concept of governmental limitation with the reality (as he sees it) of the flagrant overstepping of actual limits, and draw the obvious conclusion as to the status of his government with respect to legitimacy.<sup class="footnote-reference"><a href="#note22">3</a></sup></p>
+</blockquote>
+<p>This danger is averted by the State's propounding the doctrine that one agency must have the ultimate decision on constitutionality and that this agency, in the last analysis, must be part of the federal government.<sup class="footnote-reference"><a href="#note23">4</a></sup> For while the seeming independence of the federal judiciary has played a vital part in making its actions virtual Holy Writ for the bulk of the people, it is also and ever true that the judiciary is part and parcel of the government apparatus and appointed by the executive and legislative branches. Black admits that this means that the State has set itself up as a judge in its own cause, thus violating a basic juridical principle for aiming at just decisions. He brusquely denies the possibility of any alternative.<sup class="footnote-reference"><a href="#note24">5</a></sup></p>
+<p>Black adds:</p>
+<blockquote>
+<p>The problem, then, is to devise such governmental means of deciding as will [hopefully] reduce to a tolerable minimum the intensity of the objection that government is judge in its own cause. Having done this, you can only hope that this objection, though theoretically still tenable [italics mine], will practically lose enough of its force that the legitimating work of the deciding institution can win acceptance.<sup class="footnote-reference"><a href="#note25">6</a></sup></p>
+</blockquote>
+<p>In the last analysis, Black finds the achievement of justice and legitimacy from the State's perpetual judging of its own cause as &quot;something of a miracle.&quot;<sup class="footnote-reference"><a href="#note26">7</a></sup></p>
+<p>Applying his thesis to the famous conflict between the Supreme Court and the New Deal, Professor Black keenly chides his fellow pro-New Deal colleagues for their shortsightedness in denouncing judicial obstruction:</p>
+<blockquote>
+<p>[t]he standard version of the story of the New Deal and the Court, though accurate in its way, displaces the emphasis. . . . It concentrates on the difficulties; it almost forgets how the whole thing turned out. The upshot of the matter was [and this is what I like to emphasize] that after some twenty-four months of balking . . . the Supreme Court, without a single change in the law of its composition, or, indeed, in its actual manning, placed the affirmative stamp of legitimacy on the New Deal, and on the whole new conception of government in America.<sup class="footnote-reference"><a href="#note27">8</a></sup></p>
+</blockquote>
+<p>In this way, the Supreme Court was able to put the quietus on the large body of Americans who had had strong constitutional objections to the New Deal:</p>
+<blockquote>
+<p>Of course, not everyone was satisfied. The Bonnie Prince Charlie of constitutionally commanded laissez-faire still stirs the hearts of a few zealots in the Highlands of choleric unreality. But there is no longer any significant or dangerous public doubt as to the constitutional power of Congress to deal as it does with the national economy... .</p>
+<p>We had no means, other than the Supreme Court, for imparting legitimacy to the New Deal.<sup class="footnote-reference"><a href="#note28">9</a></sup></p>
+</blockquote>
+<p>As Black recognizes, one major political theorist who recognized?and largely in advance?the glaring loophole in a constitutional limit on government of placing the ultimate interpreting power in the Supreme Court was John C. Calhoun. Calhoun was not content with the &quot;miracle,&quot; but instead proceeded to a profound analysis of the constitutional problem. In his Disquisition, Calhoun demonstrated the inherent tendency of the State to break through the limits of such a constitution:</p>
+<blockquote>
+<p>A written constitution certainly has many and considerable advantages, but it is a great mistake to suppose that the mere insertion of provisions to restrict and limit the power of the government, without investing those for whose protection they are inserted with the means of enforcing their observance [my italics] will be sufficient to prevent the major and dominant party from abusing its powers. Being the party in possession of the government, they will, from the same constitution of man which makes government necessary to protect society, be in favor of the powers granted by the constitution and opposed to the restrictions intended to limit them. . . . The minor or weaker party, on the contrary, would take the opposite direction and regard them [the restrictions] as essential to their protection against the dominant party. . . . But where there are no means by which they could compel the major party to observe the restrictions, the only resort left them would be a strict construction of the constitution. . . . To this the major party would oppose a liberal construction. . . . It would be construction against construction?the one to contract and the other to enlarge the powers of the government to the utmost. But of what possible avail could the strict construction of the minor party be, against the liberal construction of the major, when the one would have all the power of the government to carry its construction into effect and the other be deprived of all means of enforcing its construction? In a contest so unequal, the result would not be doubtful. The party in favor of the restrictions would be overpowered. . . . The end of the contest would be the subversion of the constitution . . . the restrictions would ultimately be annulled and the government be converted into one of unlimited powers.<sup class="footnote-reference"><a href="#note29">10</a></sup></p>
+</blockquote>
+<p>One of the few political scientists who appreciated Calhoun's analysis of the Constitution was Professor J. Allen Smith. Smith noted that the Constitution was designed with checks and balances to limit any one governmental power and yet had then developed a Supreme Court with the monopoly of ultimate interpreting power. If the Federal Government was created to check invasions of individual liberty by the separate states, who was to check the Federal power? Smith maintained that implicit in the check-and-balance idea of the Constitution was the concomitant view that no one branch of government may be conceded the ultimate power of interpretation: &quot;It was assumed by the people that the new government could not be permitted to determine the limits of its own authority, since this would make it, and not the Constitution, supreme.&quot;<sup class="footnote-reference"><a href="#note30">11</a></sup></p>
+<p>The solution advanced by Calhoun (and seconded, in this century, by such writers as Smith) was, of course, the famous doctrine of the &quot;concurrent majority.&quot; If any substantial minority interest in the country, specifically a state government, believed that the Federal Government was exceeding its powers and encroaching on that minority, the minority would have the right to veto this exercise of power as unconstitutional. Applied to state governments, this theory implied the right of &quot;nullification&quot; of a Federal law or ruling within a state's jurisdiction.</p>
+<p>In theory, the ensuing constitutional system would assure that the Federal Government check any state invasion of individual rights, while the states would check excessive Federal power over the individual. And yet, while limitations would undoubtedly be more effective than at present, there are many difficulties and problems in the Calhoun solution. If, indeed, a subordinate interest should rightfully have a veto over matters concerning it, then why stop with the states? Why not place veto power in counties, cities, wards? Furthermore, interests are not only sectional, they are also occupational, social, etc. What of bakers or taxi drivers or any other occupation? Should they not be permitted a veto power over their own lives? This brings us to the important point that the nullification theory confines its checks to agencies of government itself. Let us not forget that federal and state governments, and their respective branches, are still states, are still guided by their own state interests rather than by the interests of the private citizens. What is to prevent the Calhoun system from working in reverse, with states tyrannizing over their citizens and only vetoing the federal government when it tries to intervene to stop that state tyranny? Or for states to acquiesce in federal tyranny? What is to prevent federal and state governments from forming mutually profitable alliances for the joint exploitation of the citizenry? And even if the private occupational groupings were to be given some form of &quot;functional&quot; representation in government, what is to prevent them from using the State to gain subsidies and other special privileges for themselves or from imposing compulsory cartels on their own members?</p>
+<p>In short, Calhoun does not push his pathbreaking theory on concurrence far enough: he does not push it down to the individual himself. If the individual, after all, is the one whose rights are to be protected, then a consistent theory of concurrence would imply veto power by every individual; that is, some form of &quot;unanimity principle.&quot; When Calhoun wrote that it should be &quot;impossible to put or to keep it [the government] in action without the concurrent consent of all,&quot; he was, perhaps unwittingly, implying just such a conclusion.<sup class="footnote-reference"><a href="#note31">12</a></sup> But such speculation begins to take us away from our subject, for down this path lie political systems which could hardly be called &quot;States&quot; at all.<sup class="footnote-reference"><a href="#note32">13</a></sup> For one thing, just as the right of nullification for a state logically implies its right of secession, so a right of individual nullification would imply the right of any individual to &quot;secede&quot; from the State under which he lives.<sup class="footnote-reference"><a href="#note33">14</a></sup></p>
+<p>Thus, the State has invariably shown a striking talent for the expansion of its powers beyond any limits that might be imposed upon it. Since the State necessarily lives by the compulsory confiscation of private capital, and since its expansion necessarily involves ever-greater incursions on private individuals and private enterprise, we must assert that the State is profoundly and inherently anticapitalist. In a sense, our position is the reverse of the Marxist dictum that the State is the &quot;executive committee&quot; of the ruling class in the present day, supposedly the capitalists. Instead, the State?the organization of the political means?constitutes, and is the source of, the &quot;ruling class&quot; (rather, ruling caste), and is in permanent opposition to genuinely private capital. We may, therefore, say with de Jouvenel:</p>
+<p>Only those who know nothing of any time but their own, who are completely in the dark as to the manner of Power's behaving through thousands of years, would regard these proceedings [nationalization, the income tax, etc.] as the fruit of a particular set of doctrines. They are in fact the normal manifestations of Power, and differ not at all in their nature from Henry VIII's confiscation of the monasteries. The same principle is at work; the hunger for authority, the thirst for resources; and in all of these operations the same characteristics are present, including the rapid elevation of the dividers of the spoils. Whether it is Socialist or whether it is not, Power must always be at war with the capitalist authorities and despoil the capitalists of their accumulated wealth; in doing so it obeys the law of its nature.<sup class="footnote-reference"><a href="#note34">15</a></sup></p>
+<div class="footnote-definition" id="note20"><sup class="footnote-definition-label">1</sup>
+<p>De Jouvenel, On Power, pp. 27ff.</p>
+</div>
+<div class="footnote-definition" id="note21"><sup class="footnote-definition-label">2</sup>
+<p>Charles L. Black. Jr., The People and the Court (New York: Macmillan, 1960), pp. 35ff.</p>
+</div>
+<div class="footnote-definition" id="note22"><sup class="footnote-definition-label">3</sup>
+<p>Ibid., pp. 42-43.</p>
+</div>
+<div class="footnote-definition" id="note23"><sup class="footnote-definition-label">4</sup>
+<p>Ibid., p. 52: The prime and most necessary function of the [Supreme] Court has been that of validation, not that of invalidation. What a government of limited powers needs, at the beginning and forever, is some means of satisfying the people that it has taken all steps humanly possible to stay within its powers. This is the condition of its legitimacy, and its legitimacy, in the long run, is the condition of its life. And the Court, through its history, has acted as the legitimation of the government.</p>
+</div>
+<div class="footnote-definition" id="note24"><sup class="footnote-definition-label">5</sup>
+<p>To Black, this &quot;solution,&quot; while paradoxical, is blithely self-evident: the final power of the State... must stop where the law stops it. And who shall set the limit, and who shall enforce the stopping, against the mightiest power? Why, the State itself, of course, through its judges and its laws. Who controls the temperate? Who teaches the wise? (Ibid., pp. 32-33) And: Where the questions concern governmental power in a sovereign nation, it is not possible to select an umpire who is outside government. Every national government, so long as it is a government, must have the final say on its own power. (Ibid., pp. 48-49)</p>
+</div>
+<div class="footnote-definition" id="note25"><sup class="footnote-definition-label">6</sup>
+<p>Ibid., p. 49.</p>
+</div>
+<div class="footnote-definition" id="note26"><sup class="footnote-definition-label">7</sup>
+<p>This ascription of the miraculous to government is reminiscent of James Burnham's justification of government by mysticism and irrationality: In ancient times, before the illusions of science had corrupted traditional wisdom, the founders of cities were known to be gods or demigods... . Neither the source nor the justification of government can be put in wholly rational terms... why should I accept the hereditary or democratic or any other principle of legitimacy? Why should a principle justify the rule of that man over me?... I accept the principle, well... because I do, because that is the way it is and has been. James Burnham, Congress and the American Tradition (Chicago: Regnery, 1959), pp. 3-8. But what if one does not accept the principle? What will &quot;the way&quot; be then?</p>
+</div>
+<div class="footnote-definition" id="note27"><sup class="footnote-definition-label">8</sup>
+<p>Black, The People and the Court, p. 64.</p>
+</div>
+<div class="footnote-definition" id="note28"><sup class="footnote-definition-label">9</sup>
+<p>Ibid., p. 65.</p>
+</div>
+<div class="footnote-definition" id="note29"><sup class="footnote-definition-label">10</sup>
+<p>John C. Calhoun, A Disquisition on Government (New York: Liberal Arts Press, 1953), pp. 25-27. Also cf. Murray N. Rothbard, &quot;Conservatism and Freedom: A Libertarian Comment,&quot; Modern Age (Spring, 1961): 219.</p>
+</div>
+<div class="footnote-definition" id="note30"><sup class="footnote-definition-label">11</sup>
+<p>J. Allen Smith, The Growth and Decadence of Constitutional Government (New York: Henry Holt, 1930), p. 88. Smith added: it was obvious that where a provision of the Constitution was designed to limit the powers of a governmental organ, it could be effectively nullified if its interpretation and enforcement are left to the authorities as it designed to restrain. Clearly, common sense required that no organ of the government should be able to determine its own powers. Clearly, common sense and &quot;miracles&quot; dictate very different views of government (p. 87).</p>
+</div>
+<div class="footnote-definition" id="note31"><sup class="footnote-definition-label">12</sup>
+<p>Calhoun, A Disquisition on Government, pp. 20-21.</p>
+</div>
+<div class="footnote-definition" id="note32"><sup class="footnote-definition-label">13</sup>
+<p>In recent years, the unanimity principle has experienced a highly diluted revival, particularly in the writings of Professor James Buchanan. Injecting unanimity into the present situation, however, and applying it only to changes in the status quo and not to existing laws, can only result in another transformation of a limiting concept into a rubber stamp for the State. If the unanimity principle is to be applied only to changes in laws and edicts, the nature of the initial &quot;point of origin&quot; then makes all the difference. Cf. James Buchanan and Gordon Tullock, The Calculus of Consent (Ann Arbor: University of Michigan Press, 1962), passim.</p>
+</div>
+<div class="footnote-definition" id="note33"><sup class="footnote-definition-label">14</sup>
+<p>Cf. Herbert Spencer, &quot;The Right to Ignore the State,&quot; in Social Statics (New York: D. Appleton, 1890), pp. 229-39.</p>
+</div>
+<div class="footnote-definition" id="note34"><sup class="footnote-definition-label">15</sup>
+<p>De Jouvenel, On Power, p. 171.</p>
+</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="chapter3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="chapter5.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="chapter3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="chapter5.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

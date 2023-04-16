@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>What the State Is Not</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Anatomy of the State</a></li><li class="chapter-item expanded "><a href="chapter1.html" class="active"><strong aria-hidden="true">1.</strong> What the State Is Not</a></li><li class="chapter-item expanded "><a href="chapter2.html"><strong aria-hidden="true">2.</strong> What the State Is</a></li><li class="chapter-item expanded "><a href="chapter3.html"><strong aria-hidden="true">3.</strong> How the State Preserves Itself</a></li><li class="chapter-item expanded "><a href="chapter4.html"><strong aria-hidden="true">4.</strong> How the State Transcends Its Limits</a></li><li class="chapter-item expanded "><a href="chapter5.html"><strong aria-hidden="true">5.</strong> What the State Fears</a></li><li class="chapter-item expanded "><a href="chapter6.html"><strong aria-hidden="true">6.</strong> How States Relate to One Another</a></li><li class="chapter-item expanded "><a href="chapter7.html"><strong aria-hidden="true">7.</strong> History as a Race Between State Power and Social Power</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="what-the-state-is-not"><a class="header" href="#what-the-state-is-not">What the State Is Not</a></h2>
+<p>The State is almost universally considered an institution of social service. Some theorists venerate the State as the apotheosis of society; others regard it as an amiable, though often inefficient, organization for achieving social ends; but almost all regard it as a necessary means for achieving the goals of mankind, a means to be ranged against the &quot;private sector&quot; and often winning in this competition of resources. With the rise of democracy, the identification of the State with society has been redoubled, until it is common to hear sentiments expressed which violate virtually every tenet of reason and common sense such as, &quot;we are the government.&quot; The useful collective term &quot;we&quot; has enabled an ideological camouflage to be thrown over the reality of political life. If &quot;we are the government,&quot; then anything a government does to an individual is not only just and untyrannical but also &quot;voluntary&quot; on the part of the individual concerned. If the government has incurred a huge public debt which must be paid by taxing one group for the benefit of another, this reality of burden is obscured by saying that &quot;we owe it to ourselves&quot;; if the government conscripts a man, or throws him into jail for dissident opinion, then he is &quot;doing it to himself&quot; and, therefore, nothing untoward has occurred. Under this reasoning, any Jews murdered by the Nazi government were not murdered; instead, they must have &quot;committed suicide,&quot; since they were the government (which was democratically chosen), and, therefore, anything the government did to them was voluntary on their part. One would not think it necessary to belabor this point, and yet the overwhelming bulk of the people hold this fallacy to a greater or lesser degree.</p>
+<p>We must, therefore, emphasize that &quot;we&quot; are not the government; the government is not &quot;us.&quot; The government does not in any accurate sense &quot;represent&quot; the majority of the people.<sup class="footnote-reference"><a href="#note1">1</a></sup> But, even if it did, even if 70 percent of the people decided to murder the remaining 30 percent, this would still be murder and would not be voluntary suicide on the part of the slaughtered minority.<sup class="footnote-reference"><a href="#note2">2</a></sup> No organicist metaphor, no irrelevant bromide that &quot;we are all part of one another,&quot; must be permitted to obscure this basic fact.</p>
+<p>If, then, the State is not &quot;us,&quot; if it is not &quot;the human family&quot; getting together to decide mutual problems, if it is not a lodge meeting or country club, what is it? Briefly, the State is that organization in society which attempts to maintain a monopoly of the use of force and violence in a given territorial area; in particular, it is the only organization in society that obtains its revenue not by voluntary contribution or payment for services rendered but by coercion. While other individuals or institutions obtain their income by production of goods and services and by the peaceful and voluntary sale of these goods and services to others, the State obtains its revenue by the use of compulsion; that is, by the use and the threat of the jailhouse and the bayonet.<sup class="footnote-reference"><a href="#note3">3</a></sup> Having used force and violence to obtain its revenue, the State generally goes on to regulate and dictate the other actions of its individual subjects. One would think that simple observation of all States through history and over the globe would be proof enough of this assertion; but the miasma of myth has lain so long over State activity that elaboration is necessary.</p>
+<div class="footnote-definition" id="note1"><sup class="footnote-definition-label">1</sup>
+<p>We cannot, in this chapter, develop the many problems and fallacies of &quot;democracy.&quot; Suffice it to say here that an individual's true agent or &quot;representative&quot; is always subject to that individual's orders, can be dismissed at any time and cannot act contrary to the interests or wishes of his principal. Clearly, the &quot;representative&quot; in a democracy can never fulfill such agency functions, the only ones consonant with a libertarian society.</p>
+</div>
+<div class="footnote-definition" id="note2"><sup class="footnote-definition-label">2</sup>
+<p>Social democrats often retort that democracy—majority choice of rulerslogically implies that the majority must leave certain freedoms to the minority, for the minority might one day become the majority. Apart from other flaws, this argument obviously does not hold where the minority cannot become the majority, for example, when the minority is of a different racial or ethnic group from the majority.</p>
+</div>
+<div class="footnote-definition" id="note3"><sup class="footnote-definition-label">3</sup>
+<p>Joseph A. Schumpeter, Capitalism, Socialism, and Democracy (New York: Harper and Bros., 1942), p. 198. The friction or antagonism between the private and the public sphere was intensified from the first by the fact that . . . the State has been living on a revenue which was being produced in the private sphere for private purposes and had to be deflected from these purposes by political force. The theory which construes taxes on the analogy of club dues or of the purchase of the service of, say, a doctor only proves how far removed this part of the social sciences is from scientific habits of mind. Also see Murray N. Rothbard, &quot;The Fallacy of the 'Public Sector,&quot;' New Individualist Review (Summer, 1961): 3ff.</p>
+</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="chapter2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="chapter2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
