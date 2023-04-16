@@ -1,2 +1,2 @@
 # Anatomy of the State
-Murray Rothbard
+Murray Rothbard, 1974
